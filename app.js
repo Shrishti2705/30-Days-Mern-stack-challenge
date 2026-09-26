@@ -114,3 +114,105 @@ console.log(sum)
 
 
 
+6) // Merge two arrays.
+
+const a = [1, 2];
+const b = [3, 4];
+// Output:[1, 2, 3, 4]
+
+let c=[]
+  for(let i=0; i<a.length; i++){
+  // c.push(a[i])
+    c[i]=a[i]
+  }
+for(let j=0; j<b.length; j++){
+  // c.push(b[j])
+  c[a.length+j]=b[j]
+}
+console.log(c)
+
+
+
+
+
+
+
+// 7. Rotate array to the right by 2 steps.
+
+
+ const arr = [1, 2, 3, 4, 5];
+ // Output: [4, 5, 1, 2, 3]
+let newarr=[]
+let n=arr.length
+
+for(let i=n-2; i<arr.length; i++){
+  newarr.push(arr[i])
+}
+for(let i=0; i<n-2; i++){
+  newarr.push(arr[i])
+}
+console.log(newarr)
+
+
+
+
+
+
+// 8. Check if all elements are even.
+
+ const arr = [2, 4, 6, 8];
+// Output:true
+let flag=true
+for(let i=0; i<arr.length; i++){
+  if(arr[i]%2!==0){
+    flag=false
+    break;
+  }
+
+}
+
+  console.log(flag)
+
+
+
+
+
+
+// 9. Count occurrences of a value.
+
+const arr = [1, 2, 2, 3, 2];
+// Output for value = 2:3
+let count=0
+for(let i=0; i<arr.length; i++){
+ 
+    if(arr[i]==2){
+      count++
+    
+  }
+}
+console.log(`2:${count}`)
+
+
+
+
+// 10. Find the index of the second occurrence of a value.
+
+const arr = [5, 1, 5, 2, 5];
+// Output for value = 5: 2
+let count=0
+for(let i=0; i<arr.length; i++){
+  if(arr[i]==5){
+    count++
+   
+  }
+  if(count==2){
+    console.log(`5:${i}`)
+    break;
+  }
+}
+
+
+
+
+
+
