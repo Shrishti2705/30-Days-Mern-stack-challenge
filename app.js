@@ -215,4 +215,59 @@ for(let i=0; i<arr.length; i++){
 
 
 
+// prototype code
+
+function Student(name){
+  this.name=name
+  console.log(this.name)
+}
+Student.prototype.study=function(){
+  console.log(this.name+" is studing")
+}
+
+const student1=new Student("rahul")
+student1.study()
+
+
+
+
+
+
+
+// call, apply, bind
+const person1={
+  name:"shrishti",
+  surname:"bansal",
+  myfunction: function(hometown, country){
+    return this.name + " " + this.surname+" " + hometown +" "+ country
+  }
+  
+}
+const person2={
+  name:"gaurvi",
+  surname:"bansal",
+  //   myfunction: function(){
+  //   return this.name + " " + this.surname+" "
+  // }
+}
+
+
+console.log(person1.myfunction.call(person2,"ganjbasoda","india"))  //call method
+
+console.log(person1.myfunction.apply(person2,["ahmedabad", "india"]))  //apply method
+
+
+const result=person1.myfunction.bind(person2,"bhopal","india")  //bind method
+console.log(result())
+
+
+
+
+
+
+
+
+
+
+
 
