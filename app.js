@@ -280,7 +280,44 @@ console.log(newarr)
 
 
 
-zx
+// 12. Sort an array in descending order.
+
+const arr = [3, 1, 4, 2];
+// Output:[4, 3, 2, 1]
+
+for(let i=0; i<arr.length; i++){
+  for(let j=i+1; j<arr.length; j++){
+    if(arr[i]<arr[j]){
+      let temp=arr[i]
+      arr[i]=arr[j]
+      arr[j]=temp
+    }
+  }
+}
+console.log(arr)
+
+
+
+
+
+
+// 13. Find common elements in two arrays.
+
+
+ const a = [1, 2, 3]; const b = [2, 3, 4];
+// Output:[2, 3]
+let c=[]
+for(let i=0; i<a.length; i++){
+  for(let j=0; j<b.length; j++){
+    if(a[i]==b[j]){
+      c.push(a[i])
+    }
+  }
+}
+console.log(c)
+
+
+
 
 
 
