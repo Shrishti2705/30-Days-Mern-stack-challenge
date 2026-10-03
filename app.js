@@ -320,6 +320,145 @@ console.log(c)
 
 
 
+ // Find unique elements from two arrays.
+
+const a = [1, 2, 3]; const b = [3, 4, 5];
+// Output:[1, 2, 4, 5]
+
+let newarr=[]
+for(let i=0; i<a.length; i++){
+  let found =false
+  for(let j=0; j<b.length; j++){
+    if(a[i]==b[j]){
+      found=true;
+      break;
+     
+    }
+  }
+  if(!found){
+    newarr.push(a[i])
+  }
+}
+for(let i=0; i<b.length; i++){
+  let found=false
+  for(let j=0; j<a.length; j++){
+    if(b[i]==a[j]){
+      found=true
+     break;
+    }
+  }
+  if(!found){
+    newarr.push(b[i])
+  }
+}
+console.log(newarr)
+
+
+
+
+// 15. Remove falsy values from an array.
+
+ const arr = [0, "a", "", false, 5];
+let newarr=[]
+// Output:  ["a", 5]
+for(let i=0; i<arr.length; i++){
+  if(arr[i]){
+    newarr.push(arr[i])
+  }
+}
+console.log(newarr)
+
+
+
+// 16. Chunk an array into smaller arrays.
+
+const arr = [1, 2, 3, 4, 5];
+let newarr=[]
+let size=2
+// chunk size = 2 Output:[[1, 2], [3, 4], [5]]
+for(let i=0; i<arr.length; i+=size){
+  let chunk=[]
+  for(let j=i; j<i+size && j<arr.length; j++){
+    chunk.push(arr[j])
+  }
+  newarr.push(chunk)
+}
+console.log(newarr)
+
+
+
+
+// 17. Find the longest string in an array.
+
+const arr = ["a", "abcd", "abc"];
+// Output:"abcd"
+let str=""
+for(let i=0; i<arr.length; i++){
+  if(str.length<arr[i].length)
+  {
+    str=arr[i]
+  }
+}
+console.log(str)
+
+
+
+
+
+
+// 18. Convert array to object using index as key.
+
+const arr = ['a', 'b'];
+let obj={}
+// Output:{0: 'a', 1: 'b'}
+for(i=0; i<arr.length; i++){
+  obj[i]=arr[i]
+}
+console.log(obj)
+
+
+
+
+// 19. Find second largest number.
+
+const arr = [5, 3, 9, 7,8];
+// Output: 7
+let largest=0
+let secondlargest=0
+
+for(let i=0;i<arr.length; i++){
+  if(largest<arr[i]){
+    largest=arr[i]
+  }
+}
+for(let i=0; i<arr.length; i++){
+  if(secondlargest<arr[i] && largest!==arr[i]){
+    secondlargest=arr[i]
+  }
+}
+console.log(secondlargest)
+
+
+
+
+
+
+// 20. Find missing number from a sequence.
+
+
+const arr = [1, 2, 3, 5];
+// Output:3
+let n=arr.length+1
+let expected=(n*(n+1))/2
+let actual=0
+for(let i=0; i<arr.length; i++){
+  actual+=arr[i]
+}
+console.log(expected-actual)
+  
+
+
+
 
 
 
