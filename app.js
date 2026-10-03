@@ -461,6 +461,190 @@ console.log(expected-actual)
 
 
 
+// callback concept
+
+function calculation(a,b ,callback){
+  console.log("hello")
+  callback(a,b)
+}
+function addition(a,b){
+  console.log(a+b)
+}
+function subtraction(a,b){
+  console.log(a-b)
+}
+
+calculation(1,2 , addition)
+calculation(1,2 , subtraction)
+
+
+
+
+
+// 1. Callback + setTimeout
+
+// Requirement:
+// Ek fetchData function banao jo 2 seconds baad callback ko "Data fetched successfully" pass kare.
+
+
+function fetchData(callback){
+  setTimeout(()=>{
+    callback("data fetch successfully")
+  },2000)
+}
+function resultData(data){
+  console.log(data)
+}
+fetchData(resultData)
+
+
+
+
+
+
+
+
+// 2. Promise
+
+// Ek function getUser() banao jo Promise return kare.
+
+// 2 sec baad resolve ho
+// value: "User data"
+
+// Then .then() se print karo aur .catch() bhi lagao.
+
+
+
+
+function getUser(){
+  return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+    resolve("user data")
+    
+    },2000)
+  })
+}
+
+getUser().
+  then((result)=>{
+    console.log(result)
+  })
+.catch((error)=>{
+  console.log(error)
+})
+
+
+
+
+
+
+
+// 3. Async/Await
+
+// Ek getProducts() function banao jo Promise return kare.
+
+// async/await use karke:
+
+// Products loaded
+
+// print karo.
+
+// Saath mein try/catch use karo.
+
+
+function getProducts (){
+     return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+       resolve("product loaded")
+    },2000)
+  })
+}
+
+async function showproducts(){
+     try{
+     const result=  await getProducts()
+       console.log(result)
+     }catch(error){
+         console.log(error)
+     }
+}
+showproducts()
+
+
+
+
+
+
+
+
+// promise.all
+
+let p1=new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("user")
+  },1000)
+})
+let p2=new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("post")
+  },3000)
+})
+let p3=new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("likes")
+  },2000)
+})
+
+Promise.all([p1,p2,p3]).
+  then((user)=>{
+    console.log(user)
+  }).catch((error)=>{
+    console.log(error)
+  })
+
+
+
+
+
+// promise.race
+
+let p1=new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    reject("user")
+  },1000)
+})
+let p2=new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("post")
+  },3000)
+})
+let p3=new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("likes")
+  },2000)
+})
+
+Promise.race([p1,p2,p3]).
+  then((user)=>{
+    console.log(user)
+  }).catch((error)=>{
+    console.log(error)
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
