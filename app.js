@@ -637,6 +637,182 @@ Promise.race([p1,p2,p3]).
 
 
 
+// 21. Remove first and last element.
+
+const arr = [1, 2, 3, 4];
+// Output:[2, 3]
+arr.pop()
+ arr.shift()
+
+console.log(arr)
+
+
+
+
+
+
+// 22. Find intersection without duplicates.
+
+const a = [1, 2, 2, 3];
+const b = [2, 2, 3];
+// Output: [2, 3]
+let newarr=[]
+for(let i=0; i<a.length; i++){
+  let duplicate=false
+  for(let j=0; j<b.length; j++){
+    if(a[i]==b[j]){
+      duplicate=true
+      break;
+    }
+  }
+  if(duplicate && !newarr.includes(a[i]) ){
+    newarr.push(a[i])
+  }
+}
+console.log(newarr)
+
+
+
+
+
+
+
+
+// 23. Replace every element with its square.
+
+const arr = [1, 2, 3];
+// Output:[1, 4, 9]
+let newarr=[]
+for(let i=0; i<arr.length; i++){
+  newarr.push(arr[i]*arr[i])
+}
+console.log(newarr)
+
+
+
+
+
+
+// 24. Find average of elements.
+
+const arr = [2, 4, 6, 8];
+// Output:5
+
+let average=0
+for(let i=0; i<arr.length; i++){
+  average+=arr[i]/arr.length
+}
+console.log(average)
+
+
+
+
+
+
+
+// 25. Convert array of key-value pairs to object.
+
+const arr = [['a', 1], ['b', 2]];
+// Output:{a: 1, b: 2}
+let obj=Object.fromEntries(arr)
+console.log(obj)
+
+
+
+
+
+// 26. Create an array with n copies of a value.
+
+const val = 'x', n = 3;
+// Output: ['x', 'x', 'x']
+let newarr=[]
+for(let i=0; i<3; i++){
+  newarr.push("x")
+}
+console.log(newarr)
+
+
+
+
+
+
+// 27. Replace a value in array.
+
+const arr = [1, 2, 3, 2];
+// Replace 2 with 9
+// Output:[1, 9, 3, 9]
+for(let i=0; i<arr.length; i++){
+  if(arr[i]==2){
+    arr[i]=9
+  }
+}
+console.log(arr)
+
+
+
+
+
+// 28. Shuffle an array randomly.
+
+const arr = [1, 2, 3];
+// Output (random):
+// [2, 3, 1]
+
+for(let i=arr.length-1; i>0; i--){
+  let j=Math.floor(Math.random()*(i+1))
+  let temp=arr[i]
+  arr[i]=arr[j]
+  arr[j]=temp
+}
+console.log(arr)
+
+
+
+
+
+// 29. Find frequency of each element.
+
+
+const arr = [1, 2, 1, 3, 2];
+// Output:
+// {1: 2, 2: 2, 3: 1}
+let freq={}
+for(let i=0; i<arr.length; i++){
+  let count=0
+  for(let j=0; j<arr.length; j++){
+    if(arr[i]==arr[j]){
+      count++
+    }
+  }
+  freq[arr[i]]=count
+}
+console.log(freq)
+
+
+
+
+
+// 30. Get unique values from an array of objects by key.
+
+// Input:
+const arr = [{id:1}, {id:2}, {id:1}];
+// Output: [{id:1}, {id:2}]
+let newarr=[]
+for(let i=0; i<arr.length; i++){
+  let found=false
+  for(let j=0; j<newarr.length; j++){
+    if(arr[i].id==newarr[j].id){
+      found=true
+      break;
+    }
+  }
+  if(!found){
+    newarr[i]=arr[i]
+  }
+}
+console.log(newarr)
+
+
 
 
 
