@@ -892,6 +892,79 @@ console.log(sum)
 
 
 
+// 36. Print elements of an array using a `for` loop.
+
+const arr = [10, 20, 30];
+// Output:10 20 30
+for(let i=0; i<arr.length; i++){
+  console.log(arr[i])
+}
+
+
+
+
+
+
+
+// 37. Print array elements in reverse.
+  const arr = [1, 2, 3];
+ // Output:3 2 1
+for(let i=arr.length-1; i>=0; i--){
+  console.log(arr[i])
+}
+
+
+
+
+
+
+
+// 38. Count vowels in a string.
+
+const arr= "education"
+// Output:5
+let count=0
+for(let i=0; i<arr.length; i++){
+  if(arr[i]=="a" || arr[i]=="i" || arr[i]=="o" || arr[i]=="u" || arr[i]=="e")
+    count++
+}
+console.log(count)
+
+
+
+
+
+// 39. Find factorial of a number.
+
+let num= 4
+// Output:24
+let fact=1
+for(let i=1; i<=4; i++){
+   fact=fact*i
+}
+console.log(fact)
+
+
+
+
+
+
+
+// 40. Find all divisors of a number.
+
+
+let num= 12
+// Output:1 2 3 4 6 12
+for(let i=1; i<=12; i++){
+    if(12%i==0){
+      console.log(i)
+    }
+}
+
+
+
+
+
 
 
 
