@@ -967,6 +967,72 @@ for(let i=1; i<=12; i++){
 
 
 
+// 41. Print Fibonacci series up to n terms.
+
+let n = 6
+// Output:0 1 1 2 3 5
+let a =0;
+let b=1;
+
+for(let i=0; i<n; i++){
+      console.log(a)
+    c=a+b
+    a=b
+    b=c
+    
+}
+
+
+
+
+
+
+// 42. Print powers of 2 up to 2^5.
+
+// Output:1 2 4 8 16 32
+for(let i=0; i<=5; i++){
+    console.log(Math.pow(2,i))
+}
+
+
+
+
+
+// 43. Reverse a string using a loop.
+
+const str= "loop"
+// Output: "pool"
+for(let i=str.length-1; i>=0; i--){
+    console.log(str[i])
+}
+
+
+
+
+
+
+
+// 44. Check if a number is prime.
+
+let num=7
+ let flag=true
+// Output:true
+for(let i=2; i<num; i++){
+    if(num%i==0){
+        flag=false
+        break;
+    }
+    
+    
+}
+console.log(flag)
+
+
+
+
+
+
+
 
 
 
