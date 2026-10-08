@@ -1031,6 +1031,43 @@ console.log(flag)
 
 
 
+// 45. Print prime numbers between 1 and 20.
+
+// Output: 2 3 5 7 11 13 17 19
+
+for(let i=2; i<=20; i++){
+  let flag=true
+for(j=2; j<i; j++){
+  if(i%j==0){
+    flag=false;
+    break
+  }
+}
+  if(flag){
+    console.log(i)
+  }
+}
+
+
+
+
+
+
+// 46. Print triangle pattern using `*`.
+
+let n = 3
+// Output: 
+//   *
+//  **
+// ***
+
+for(let i=0; i<n; i++){
+  let row=""
+  for(let j=0; j<=i; j++){
+    row+="*"
+  }
+  console.log(row)
+}
 
 
 
