@@ -1072,6 +1072,55 @@ for(let i=0; i<n; i++){
 
 
 
+// 47. Count digits in a number.
+
+let num= 12345
+// Output:5
+
+console.log(num.toString().length)
+
+
+
+
+
+// 48. Sum of digits in a number.
+
+let num= 123
+// Output: 6
+let str=num.toString()
+let sum=0
+for(let i=0; i<str.length; i++){
+  sum+=Number(str[i])
+}
+console.log(sum)
+
+
+
+
+
+
+
+
+
+// 50. Print array elements using `for...of`.
+
+let arr= [10, 20, 30]
+// Output: 10 20 30
+
+for(let i of arr){
+  console.log(i)
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
