@@ -1096,7 +1096,15 @@ console.log(sum)
 
 
 
+// 49. Check if a number is a palindrome.
 
+let num= 121
+// Output: true
+// 
+
+let reverse=num.toString().split("").reverse().join("")
+let result=(num.toString()===reverse)
+console.log(result)
 
 
 
@@ -1110,6 +1118,104 @@ let arr= [10, 20, 30]
 for(let i of arr){
   console.log(i)
 }
+
+
+
+
+
+
+// 51. Print object keys using `for...in`.
+
+ const obj = {a:1, b:2};
+// Output:a b
+
+for(let key in obj){
+  console.log(key)
+}
+
+
+
+
+
+// 52. Sum of even numbers in array.
+
+let arr= [1, 2, 3, 4]
+// Output: 6
+let sum=0;
+for(let i=0; i<arr.length; i++){
+  if(arr[i]%2==0){
+    sum+=arr[i]
+  }
+}
+console.log(sum)
+
+
+
+
+
+
+
+// 53. Count how many times a character appears.
+
+let str= "hellllllo", char="l"
+// Output: 2
+let count=0
+for(let i=0; i<str.length; i++){
+  if(str[i]==char){
+    count++
+  }
+}
+console.log(count)
+
+
+
+
+
+// 54. Print only object values.
+
+let obj={x: 10, y: 20}
+// Output: 10 20
+
+for(let value of Object.values(obj)){
+  console.log(value)
+}
+
+
+
+
+
+// 55. Find min value using loop.
+
+let arr= [10, 5, 8]
+let min=arr[0]
+// Output:5
+for(let i=0; i<arr.length; i++){
+  if(min>arr[i]){
+    min=arr[i]
+  }
+}
+console.log(min)
+
+
+
+
+
+// 56. Find max value using loop.
+
+let arr= [10, 5, 8]
+// Output: 10
+  let max=arr[0]
+
+for(let i=0; i<arr.length; i++){
+  if(max<arr[i]){
+    max=arr[i]
+  }
+}
+console.log(max)
+
+
+
+
 
 
 
