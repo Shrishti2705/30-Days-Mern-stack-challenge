@@ -1217,6 +1217,32 @@ console.log(max)
 
 
 
+// 57. Check if array contains a value.
+
+let arr= [1, 2, 3], value = 5
+// Output:true
+console.log(arr.includes(value))
+
+
+
+
+
+
+
+// 58. Count how many times each element appears.
+
+let arr=[1, 1, 2, 2, 2]
+// Output:{1: 2, 2: 3}
+let result=arr.reduce((count,ele)=>{
+  if(count[ele]){
+count[ele]++
+  }else{
+   count[ele]=1
+  }
+  return count
+},{})
+console.log(result)
+
 
 
 
